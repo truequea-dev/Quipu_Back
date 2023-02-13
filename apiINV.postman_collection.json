@@ -1,0 +1,1201 @@
+{
+	"info": {
+		"_postman_id": "b55f2268-87a7-42ee-b445-f17693965e6b",
+		"name": "apiINV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "productos",
+			"item": [
+				{
+					"name": "obtener todos los productos detalles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer producto por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2dc18aecae74618e5be77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer producto por codigo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/producto/codigo/:codigo",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto",
+								"codigo",
+								":codigo"
+							],
+							"variable": [
+								{
+									"key": "codigo",
+									"value": "213213231"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_producto\" : \"asdasdas\",\r\n    \"descripcion_producto\" : \"asdasd\",\r\n    \"cantidad_producto\" : \"12345\",\r\n    \"unidad_medida_producto\" : \"12345\",\r\n    \"precio_compra_producto\" : \"123\",\r\n    \"precio_venta_producto\" : \"123\",\r\n    \"precio_venta_maximo_producto\" : \"123\",\r\n    \"precio_venta_minimo_producto\" : \"123\",\r\n    \"moneda_producto\" : \"dolar\",\r\n    \"referencia_producto\" : \"asdasdasd\",\r\n    \"notas_producto\" : \"asdasda\",\r\n    \"codigo_producto\" : \"213213231\",\r\n    \"fecha_inicial_producto\" : \"\",\r\n    \"fecha_ult_actualizacion_producto\" : \"\",\r\n    \"parametro_1_producto\" : \"asdasd\",\r\n    \"parametro_2_producto\" : \"asasdsd\",\r\n    \"estado_producto\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_producto\" : \"ghfghfghfgh\",\r\n    \"descripcion_producto\" : \"asdasd\",\r\n    \"cantidad_producto\" : \"12345\",\r\n    \"unidad_medida_producto\" : \"12345\",\r\n    \"precio_compra_producto\" : \"123\",\r\n    \"precio_venta_producto\" : \"123\",\r\n    \"precio_venta_maximo_producto\" : \"123\",\r\n    \"precio_venta_minimo_producto\" : \"123\",\r\n    \"moneda_producto\" : \"dolar\",\r\n    \"referencia_producto\" : \"asdasdasd\",\r\n    \"notas_producto\" : \"asdasda\",\r\n    \"codigo_producto\" : \"213213231\",\r\n    \"fecha_inicial_producto\" : \"\",\r\n    \"fecha_ult_actualizacion_producto\" : \"\",\r\n    \"parametro_1_producto\" : \"asdasd\",\r\n    \"parametro_2_producto\" : \"asasdsd\",\r\n    \"estado_producto\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2dc18aecae74618e5be77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar un producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "empresas",
+			"item": [
+				{
+					"name": "obtener todas las empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar empresas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_empresa\" : \"asdasd\",\r\n    \"identificacion_empresa\" : \"123123\",\r\n    \"descripcion_empresa\" : \"bbb\",\r\n    \"fecha_registro_empresa\" : \"\",\r\n    \"pais_empresa\" : \"asdas\",\r\n    \"ciudad_empresa\" : \"asdas\",\r\n    \"direccion_empresa\" : \"cc\",\r\n    \"telefono_empresa\" : \"13231\",\r\n    \"email_empresa\" : \"correo@correo.com\",\r\n    \"nro_whatsapp\" : \"12321323\",\r\n    \"slogan_empresa\" : \"\",\r\n    \"version_paquete_empresa\" : \"1231232\",\r\n    \"fecha_ultimo_mes_pago_empresa\" : \"\",\r\n    \"params_adicionales_1_empresa\" : \"asdasd\",\r\n    \"params_adicionales_2_empresa\" : \"adsdas\",\r\n    \"notas_empresa\" : \"asdasdas\",\r\n    \"estado_empresa\" : true,\r\n    \"categoriasEmpresa_id\" : \"61f20c7715306a33e0b2e4eb\",\r\n    \"tiposEmpresa_id\" : \"61f4a53e3fe9c22d0800eb84\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar Empresa por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_empresa\" : \"asdasd\",\r\n    \"identificacion_empresa\" : \"123123\",\r\n    \"descripcion_empresa\" : \"bbb\",\r\n    \"fecha_registro_empresa\" : \"\",\r\n    \"pais_empresa\" : \"asdas\",\r\n    \"ciudad_empresa\" : \"asdas\",\r\n    \"direccion_empresa\" : \"cc\",\r\n    \"telefono_empresa\" : \"13231\",\r\n    \"email_empresa\" : \"correo@correo.com\",\r\n    \"nro_whatsapp\" : \"12321323\",\r\n    \"slogan_empresa\" : \"\",\r\n    \"version_paquete_empresa\" : \"1231232\",\r\n    \"fecha_ultimo_mes_pago_empresa\" : \"\",\r\n    \"params_adicionales_1_empresa\" : \"asdasd\",\r\n    \"params_adicionales_2_empresa\" : \"adsdas\",\r\n    \"notas_empresa\" : \"asdasdas\",\r\n    \"estado_empresa\" : true,\r\n    \"categoriasEmpresa_id\" : \"61f20c7715306a33e0b2e4eb\",\r\n    \"tiposEmpresa_id\" : \"61f4a53e3fe9c22d0800eb84\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f4a5db864f2f117889a97d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener empresa por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar empresa por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/cliente",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener cliente por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/cliente/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e06910ccf94960fbde67"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres_cliente\" : \"cliente1\",\r\n    \"apellidos_cliente\" : \"apellido1\",\r\n    \"dni_cliente\" : \"12321\",\r\n    \"cel_cliente\" : \"1232131232\",\r\n    \"direccion_cliente\" : \"calle1\",\r\n    \"correo_cliente\" : \"correo@corre.com\",\r\n    \"parametros_1_cliente\" : \"asdasd\",\r\n    \"parametros_2_cliente\" : \"asdasd\",\r\n    \"empresa_id\" : \"61f49fe7f5d93b04c43b987f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/cliente",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cliente por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres_cliente\" : \"cliente1\",\r\n    \"apellidos_cliente\" : \"apellido1\",\r\n    \"dni_cliente\" : \"12321\",\r\n    \"cel_cliente\" : \"1232131232\",\r\n    \"direccion_cliente\" : \"calle1\",\r\n    \"correo_cliente\" : \"correo@corre.com\",\r\n    \"parametros_1_cliente\" : \"asdasd\",\r\n    \"parametros_2_cliente\" : \"asdasd\",\r\n    \"empresa_id\" : \"61f49fe7f5d93b04c43b987f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/cliente/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f4a0ca3f04722898cae90f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar cliente por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/cliente/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e06910ccf94960fbde67"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener cliente por dni",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/cliente/dni/:dni",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								"dni",
+								":dni"
+							],
+							"variable": [
+								{
+									"key": "dni",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar cliente por dni",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/cliente/dni/:dni",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								"dni",
+								":dni"
+							],
+							"variable": [
+								{
+									"key": "dni",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cliente por Dni",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres_cliente\" : \"3333\",\r\n    \"apellidos_cliente\" : \"apellido1\",\r\n    \"dni_cliente\" : \"12321\",\r\n    \"cel_cliente\" : \"1232131232\",\r\n    \"direccion_cliente\" : \"calle1\",\r\n    \"correo_cliente\" : \"correo@corre.com\",\r\n    \"parametros_1_cliente\" : \"asdasd\",\r\n    \"parametros_2_cliente\" : \"asdasd\",\r\n    \"empresa_id\" : \"61f49fe7f5d93b04c43b987f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/cliente/dni/:dni",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"cliente",
+								"dni",
+								":dni"
+							],
+							"variable": [
+								{
+									"key": "dni",
+									"value": "12321"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categoriaProducto",
+			"item": [
+				{
+					"name": "get categoria producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categorias_producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_categoria\" : \"catg1\",\r\n    \"descripcion_categoria\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categorias_producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar categoria producto por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_categoria\" : \"asdasd\",\r\n    \"descripcion_categoria\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categorias_producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e33a2e944531b86aa539"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar categoria producto por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categorias_producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e33a2e944531b86aa539"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categoriaEmpresa",
+			"item": [
+				{
+					"name": "get categoria empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categorias_empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_categoria\" : \"catg1\",\r\n    \"descripcion_categoria\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categorias_empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar categoria empresa por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_categoria\" : \"asdas1123d\",\r\n    \"descripcion_categoria\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categorias_empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e46a8c02da4ea4799cc2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar categoria empresa por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categorias_empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categorias_empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tiposProducto",
+			"item": [
+				{
+					"name": "get tipos producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tipos_producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar tipo producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_type\" : \"catg1\",\r\n    \"descripcion_type\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/tipos_producto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar tipo producto por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_type\" : \"sdasd\",\r\n    \"descripcion_type\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/tipos_producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e600dd4c0a49040f8801"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar tipo producto por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tipos_producto/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e600dd4c0a49040f8801"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tiposEmpresa",
+			"item": [
+				{
+					"name": "get tipos empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tipos_empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar tipo empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_type\" : \"catg1\",\r\n    \"descripcion_type\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/tipos_empresa",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar tipo empresa por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_type\" : \"sdasd\",\r\n    \"descripcion_type\": \"asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/tipos_empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e600dd4c0a49040f8801"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar tipo empresa por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tipos_empresa/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tipos_empresa",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2e600dd4c0a49040f8801"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "salida_entrada",
+			"item": [
+				{
+					"name": "obtener todas las Salidas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/salida",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"salida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar Salida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor_sal\" : \"12345\",\r\n    \"fecha_sal\" : \"\",\r\n    \"servicios_idServicio\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/salida",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"salida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar Salida por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor_sal\" : \"2222\",\r\n    \"fecha_sal\" : \"\",\r\n    \"servicios_idServicio\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/salida/: id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"salida",
+								": id"
+							],
+							"variable": [
+								{
+									"key": " id",
+									"value": "61f4113152fbd72a30617f1f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener Salida por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/salida/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"salida",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f40f9352fbd72a30617f1d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar Salida por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/salida/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"salida",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f40f9352fbd72a30617f1d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todas las entradas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/entrada",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"entrada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar Entrada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor_ent\" : \"54321\",\r\n    \"fecha_ent\" : \"\",\r\n    \"servicios_idServicio\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/entrada",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"entrada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar Entrada por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor_ent\" : \"666666\",\r\n    \"fecha_ent\" : \"\",\r\n    \"servicios_idServicio\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/entrada/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"entrada",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f4119d52fbd72a30617f20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener Entrada por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/entrada/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"entrada",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f40fee52fbd72a30617f1e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar Entrada por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/entrada/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"entrada",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f40fee52fbd72a30617f1e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
